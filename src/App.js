@@ -3,7 +3,6 @@ import './App.css';
 import Header from './components/Header';
 import Table from './components/Table';
 
-
 function App() {
 
   const initialURL ="https://geocoding-api.open-meteo.com/v1/search?name=new%20york&count=100";
@@ -22,10 +21,12 @@ function App() {
   },[])
 
   return (
-    <header>
-      <Header/>
-      <Table table = {table}/>
-    </header>
+    <div>
+      <Header />
+      <div className="container mt-5">
+        <Table table = {table} />  
+      </div>
+      </div>
   );
 }
 
