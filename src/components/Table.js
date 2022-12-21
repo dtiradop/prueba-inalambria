@@ -1,8 +1,7 @@
 import React from "react";
 import { Popover } from "react-bootstrap";
-import { OverlayTrigger } from 'react-bootstrap';
-import {Button} from 'react-bootstrap';
-
+import { OverlayTrigger } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 const Table = ({ table = [] }) => {
   return (
@@ -21,29 +20,44 @@ const Table = ({ table = [] }) => {
           </thead>
           <tbody>
             {table.map((item, i) => (
-              
               <tr>
-                <td width={200}><img src={item.country_code === 'US' ? 'https://cdn-icons-png.flaticon.com/512/323/323310.png' : item.country_code === 'CO' ? 'https://www.kindpng.com/picc/m/501-5015876_cono-con-bandera-de-colombia-bandera-colombia-circulo.png' :  item.country_code === 'JM' ? 'https://w7.pngwing.com/pngs/58/102/png-transparent-flag-of-jamaica-flag-miscellaneous-flag-logo.png' : 'https://www.pnguniverse.com/wp-content/uploads/2020/09/Bandera-circular-de-Reino-Unido.png' } width="20%"/></td>
+                <td width={200}>
+                  <img
+                    src={
+                      item.country_code === "US"
+                        ? "https://cdn-icons-png.flaticon.com/512/323/323310.png"
+                        : item.country_code === "CO"
+                        ? "https://www.kindpng.com/picc/m/501-5015876_cono-con-bandera-de-colombia-bandera-colombia-circulo.png"
+                        : item.country_code === "JM"
+                        ? "https://w7.pngwing.com/pngs/58/102/png-transparent-flag-of-jamaica-flag-miscellaneous-flag-logo.png"
+                        : "https://www.pnguniverse.com/wp-content/uploads/2020/09/Bandera-circular-de-Reino-Unido.png"
+                    }
+                    width="20%"
+                  />
+                </td>
                 <td>{item.name}</td>
                 <td>{item.latitude}</td>
                 <td>{item.longitude}</td>
                 <td>{item.population}</td>
                 <td>
-                <OverlayTrigger
-          trigger="click"
-          key="right"
-          placement="right"
-          overlay={
-            <Popover id={`popover-positioned-right`}>
-              <Popover.Header as="h3">{`Popover right`}</Popover.Header>
-              <Popover.Body>
-                <strong>Holy guacamole!</strong> Check this info.
-              </Popover.Body>
-            </Popover>
-          }
-        >
-          <Button variant="secondary">Popover on right</Button>
-        </OverlayTrigger>
+                  <OverlayTrigger
+                    trigger="click"
+                    key="right"
+                    placement="right"
+                    overlay={
+                      <Popover id={`popover-positioned-right`}>
+                        <Popover.Header as="h3">{item.name}</Popover.Header>
+                        <Popover.Body>
+                          Admin 1: {item.admin1} <br></br>
+                          Admin 2: {item.admin2}<br></br>
+                          Admin 3: {item.admin3}<br></br>
+                          Admin 4: {item.admin4}<br></br>
+                        </Popover.Body>
+                      </Popover>
+                    }
+                  >
+                    <Button variant="btn btn-danger">Ver más</Button>
+                  </OverlayTrigger>
                 </td>
               </tr>
             ))}
