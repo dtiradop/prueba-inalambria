@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { Popover } from "react-bootstrap";
 import { OverlayTrigger } from "react-bootstrap";
@@ -22,10 +23,10 @@ const Table = ({ table = [] }) => {
             {table.map((item, i) => (
               <tr>
                 <td width={200}>
-                  <image
+                  <img
                     src={
                       item.country_code === "US"
-                        ? "https://cdn-icons-png.flaticon.com/512/323/323310.png"
+                        ? "{https://cdn-icons-png.flaticon.com/512/323/323310.png"
                         : item.country_code === "CO"
                         ? "https://www.kindpng.com/picc/m/501-5015876_cono-con-bandera-de-colombia-bandera-colombia-circulo.png"
                         : item.country_code === "JM"
