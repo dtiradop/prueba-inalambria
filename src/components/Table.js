@@ -28,10 +28,10 @@ const Table = ({ table = [] }) => {
                       item.country_code === "US"
                         ? "https://cdn-icons-png.flaticon.com/512/323/323310.png"
                         : item.country_code === "CO"
-                        ? "https://www.kindpng.com/picc/m/501-5015876_cono-con-bandera-de-colombia-bandera-colombia-circulo.png"
+                        ? "https://cdn-icons-png.flaticon.com/512/197/197575.png"
                         : item.country_code === "JM"
-                        ? "https://w7.pngwing.com/pngs/58/102/png-transparent-flag-of-jamaica-flag-miscellaneous-flag-logo.png"
-                        : "https://www.pnguniverse.com/wp-content/uploads/2020/09/Bandera-circular-de-Reino-Unido.png"
+                        ? "https://cdn-icons-png.flaticon.com/512/197/197611.png"
+                        : "https://cdn-icons-png.flaticon.com/512/197/197374.png"
                     }
                     width="20%"/>
                 </td>
