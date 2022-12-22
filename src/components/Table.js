@@ -26,7 +26,7 @@ const Table = ({ table = [] }) => {
                   <img
                     src={
                       item.country_code === "US"
-                        ? "{https://cdn-icons-png.flaticon.com/512/323/323310.png"
+                        ? "https://cdn-icons-png.flaticon.com/512/323/323310.png"
                         : item.country_code === "CO"
                         ? "https://www.kindpng.com/picc/m/501-5015876_cono-con-bandera-de-colombia-bandera-colombia-circulo.png"
                         : item.country_code === "JM"
