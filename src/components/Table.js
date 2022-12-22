@@ -22,7 +22,7 @@ const Table = ({ table = [] }) => {
             {table.map((item, i) => (
               <tr>
                 <td width={200}>
-                  <img
+                  <image
                     src={
                       item.country_code === "US"
                         ? "https://cdn-icons-png.flaticon.com/512/323/323310.png"
@@ -32,8 +32,7 @@ const Table = ({ table = [] }) => {
                         ? "https://w7.pngwing.com/pngs/58/102/png-transparent-flag-of-jamaica-flag-miscellaneous-flag-logo.png"
                         : "https://www.pnguniverse.com/wp-content/uploads/2020/09/Bandera-circular-de-Reino-Unido.png"
                     }
-                    width="20%"
-                  />
+                    width="20%"/>
                 </td>
                 <td>{item.name}</td>
                 <td>{item.latitude}</td>
